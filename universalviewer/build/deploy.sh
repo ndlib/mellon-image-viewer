@@ -9,9 +9,10 @@ rm -rf universalviewer
 
 # get uv
 git clone https://github.com/UniversalViewer/universalviewer.git
+cd universalviewer
 git checkout $universalviewerbranch
 
-cd universalviewer
+
 
 #install uv mods
 npm install -g grunt
