@@ -24,7 +24,6 @@
   },
   "dependencies": {
     "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "universalviewer": "^3.0.16"
+    "react-dom": "^16.4.2"
   }
 }
