@@ -64,4 +64,4 @@ typings/
 universalviewer/build/universalviewer
 
 # ignore react builds
-dist/*
+dist
