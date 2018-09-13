@@ -1,14 +1,21 @@
 import React, { Component} from "react";
 import "./App.css";
-
-const universalViewerUrl = "https://d2i4hcwlwv1do1.cloudfront.net/"
+import ImageViewer from "./ImageViewer.js";
 
 class App extends Component{
   render(){
     return(
       <div className="App">
-        <iframe width={this.props.width} height={this.props.height} src={universalViewerUrl + "#?manifest=" + this.props.manifest + "&c=" + this.props.c + "&m=" + this.props.m + "&s=" + this.props.s + "&cv=" + this.props.cv + "&xywh=" + this.props.xywh}></iframe>
-      </div>
+          <ImageViewer
+          width="800px"
+            height="600px"
+            manifest="http://wellcomelibrary.org/iiif/b19646045/manifest"
+            c=""
+            m=""
+            s=""
+            cv=""
+            xywh="" />
+        </div>
     );
   }
 }
