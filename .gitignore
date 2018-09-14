@@ -62,5 +62,4 @@ typings/
 .next
 
 # the cloned source from the universalviewer build script
-
-universalviewer
+/universalviewer
