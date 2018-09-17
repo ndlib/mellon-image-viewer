@@ -1,4 +1,3 @@
-cd universalviewer
+./build/universalviewer/build.sh
 
-# build the dist
-grunt build --dist
+./build/react/build.sh
