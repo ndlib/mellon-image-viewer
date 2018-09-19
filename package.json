@@ -1,7 +1,8 @@
 {
-  "name": "my-component2",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "@hesburgh-wse/react-iv-component",
+  "version": "0.1.1",
+  "description": "A IIIF React component",
+  "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
