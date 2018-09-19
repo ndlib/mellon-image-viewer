@@ -1,34 +1,30 @@
-const path = require("path");
-const webpack = require("webpack");
-
+/*** webpack.config.js ***/
+const path = require('path');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const htmlWebpackPlugin = new HtmlWebpackPlugin({
+    template: path.join(__dirname, "examples/src/index.html"),
+    filename: "./index.html"
+});
 module.exports = {
-  entry: "./src/index.js",
-  mode: "development",
-  module: {
-    rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: 'babel-loader',
-        options: { presets: ['env'] }
-      },
-      {
-        test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ]
-      }
-    ]
-  },
-  resolve: { extensions: ['*', '.js', '.jsx'] },
-  output: {
-    path: path.resolve(__dirname, "dist/"),
-    publicPath: "/dist/",
-    filename: "bundle.js"
-  },
-  devServer: {
-    contentBase: path.join(__dirname, "public/"),
-    port: 3000,
-    publicPath: "http://localhost:3000/dist/",
-    hotOnly: true
-  },
-  plugins: [ new webpack.HotModuleReplacementPlugin() ]
+    entry: path.join(__dirname, "examples/src/index.js"),
+    module: {
+        rules: [
+            {
+                test: /\.(js|jsx)$/,
+                use: "babel-loader",
+                exclude: /node_modules/
+            },
+            {
+                test: /\.css$/,
+                use: ["style-loader", "css-loader"]
+            }
+        ]
+    },
+    plugins: [htmlWebpackPlugin],
+    resolve: {
+        extensions: [".js", ".jsx"]
+    },
+    devServer: {
+        port: 3001
+    }
 };
