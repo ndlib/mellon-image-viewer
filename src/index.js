@@ -1,7 +1,7 @@
 import React, { Component} from "react";
 import PropTypes from 'prop-types';
 
-const universalViewerUrl = "https://dptsn6y11mgr6.cloudfront.net/universalviewer/index.html"
+const universalViewerUrl = "/universalviewer/index.html"
 class ImageViewer extends Component{
   render(){
     return(
