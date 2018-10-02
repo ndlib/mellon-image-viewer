@@ -1,15 +1,16 @@
 # image-viewer
-IIIF web component
+IIIF Viewer React component
 
+Builds a react component that can be included into a react application that will include universalviewer
 
 # Install
-npm install -g yarn
-yarn
-
+./local-build.sh
 
 # run
 yarn start
-goto localhost:3000 
+goto localhost:3000
+
+Currently this does not run the local univeralviewer instance.  
 
 # build
 yarn build

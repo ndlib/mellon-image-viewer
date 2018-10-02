@@ -1,11 +1,11 @@
 import React, { Component} from "react";
 import PropTypes from 'prop-types';
+import config from './config';
 
-const universalViewerUrl = "/universalviewer/index.html"
 class ImageViewer extends Component{
   render(){
     return(
-      <iframe width={this.props.width} height={this.props.height} src={universalViewerUrl + "#?manifest=" + this.props.manifest + "&c=" + this.props.c + "&m=" + this.props.m + "&s=" + this.props.s + "&cv=" + this.props.cv + "&xywh=" + this.props.xywh}></iframe>
+      <iframe width={this.props.width} height={this.props.height} src={config.universalViewerUrl + "#?manifest=" + this.props.manifest + "&c=" + this.props.c + "&m=" + this.props.m + "&s=" + this.props.s + "&cv=" + this.props.cv + "&xywh=" + this.props.xywh}></iframe>
     );
   }
 }
