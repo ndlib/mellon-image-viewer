@@ -14,3 +14,11 @@ Currently this does not run the local univeralviewer instance.
 
 # build
 yarn build
+
+# Testing
+
+To run the tests one time.
+yarn test  
+
+To watch changes to the test file
+yarn watch
