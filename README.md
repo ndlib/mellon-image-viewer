@@ -9,7 +9,15 @@ yarn
 
 # run
 yarn start
-goto localhost:3000 
+goto localhost:3000
 
 # build
 yarn build
+
+# Testing
+
+To run the tests one time.
+yarn test  
+
+To watch changes to the test file
+yarn watch
