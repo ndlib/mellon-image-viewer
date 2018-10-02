@@ -22,3 +22,7 @@ yarn test
 
 To watch changes to the test file
 yarn watch
+
+
+Enzyme:  https://airbnb.io/enzyme/docs/api
+Jest: https://jestjs.io/docs/en/tutorial-react
