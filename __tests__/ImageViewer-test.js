@@ -15,7 +15,7 @@ test('ImageViewer allows the height to be set', () => {
 
 test('ImageViewer allows the width to be set', () => {
   const iframe = shallow(<ImageViewer width="100" /> );
-  expect(iframe.find('iframe[width="100"]').exists()).toEqual(true);
+  expect(iframe.find('iframe[width="200"]').exists()).toEqual(true);
 });
 
 test('ImageViewer allows the manifest to be set', () => {
