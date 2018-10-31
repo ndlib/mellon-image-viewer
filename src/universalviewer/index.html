@@ -14,6 +14,15 @@
         }
     </style>
     <script type="text/javascript">
+    // generic origin header so that we can connect o AWS CORS
+    var o = XMLHttpRequest.prototype.open;
+    XMLHttpRequest.prototype.open = function(){
+      var res = o.apply(this, arguments);
+      var err = new Error();
+      this.setRequestHeader('Origin', window.location.host);
+      return res;
+    }
+
     window.addEventListener('uvLoaded', function(e) {
             urlDataProvider = new UV.URLDataProvider(true);
             var formattedLocales;
