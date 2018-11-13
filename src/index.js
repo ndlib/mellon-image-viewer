@@ -2,10 +2,30 @@ import React, { Component} from "react";
 import PropTypes from 'prop-types';
 import config from './config';
 
+// read the url param so that we can set a url in the params
+let urlParams;
+(window.onpopstate = function () {
+    let match,
+        pl     = /\+/g,  // Regex for replacing addition symbol with a space
+        search = /([^&=]+)=?([^&]*)/g,
+        decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+        query  = window.location.search.substring(1);
+
+    urlParams = {};
+    while (match = search.exec(query)) {
+      urlParams[decode(match[1])] = decode(match[2]);
+    }
+    console.log(urlParams)
+})()
+
 class ImageViewer extends Component{
   render(){
+    let manifest = this.props.manifest
+    if (urlParams['manifest']) {
+      manifest = urlParams['manifest']
+    }
     return(
-      <iframe width={this.props.width} height={this.props.height} src={config.universalViewerUrl + "#?manifest=" + this.props.manifest + "&c=" + this.props.c + "&m=" + this.props.m + "&s=" + this.props.s + "&cv=" + this.props.cv + "&xywh=" + this.props.xywh}></iframe>
+      <iframe width={this.props.width} height={this.props.height} src={config.universalViewerUrl + "#?manifest=" + manifest + "&c=" + this.props.c + "&m=" + this.props.m + "&s=" + this.props.s + "&cv=" + this.props.cv + "&xywh=" + this.props.xywh}></iframe>
     );
   }
 }
