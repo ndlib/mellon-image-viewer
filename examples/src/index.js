@@ -8,5 +8,5 @@ const App = () => (
 );
 
 const el = document.getElementById('root');
-
+console.log(el.getAttribute('data-param'))
 render(<App manifest={el.getAttribute('data-param')} />, el);

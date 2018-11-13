@@ -8,7 +8,7 @@
     <noscript>
         You need to enable JavaScript to run this app.
     </noscript>
-    <div id="root" ></div>
+    <div id="root"></div>
     <script>
     // read the url param so that we can set a url in the params
     let urlParams;
@@ -25,7 +25,9 @@
         }
         console.log(urlParams)
         if (urlParams['manifest']) {
+          console.log("Set params")
           const el = document.getElementById('root');
+          console.log(el)
           el.setAttribute("data-param", urlParams['manifest'])
         }
     })()
