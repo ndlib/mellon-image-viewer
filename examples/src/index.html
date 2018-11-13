@@ -8,6 +8,27 @@
     <noscript>
         You need to enable JavaScript to run this app.
     </noscript>
-    <div id="root"></div>
+    <div id="root" ></div>
+    <script>
+    // read the url param so that we can set a url in the params
+    let urlParams;
+    (window.onpopstate = function () {
+        let match,
+            pl     = /\+/g,  // Regex for replacing addition symbol with a space
+            search = /([^&=]+)=?([^&]*)/g,
+            decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+            query  = window.location.search.substring(1);
+
+        urlParams = {};
+        while (match = search.exec(query)) {
+          urlParams[decode(match[1])] = decode(match[2]);
+        }
+        console.log(urlParams)
+        if (urlParams['manifest']) {
+          const el = document.getElementById('root');
+          el.setAttribute("data-param", urlParams['manifest'])
+        }
+    })()
+    </script>
 </body>
 </html>

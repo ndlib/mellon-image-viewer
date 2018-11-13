@@ -4,7 +4,9 @@ import { render} from 'react-dom';
 import ImageViewer from '../../src';
 
 const App = () => (
-  <ImageViewer />
+  <ImageViewer manifest={this.props.manifest} />
 );
 
-render(<App />, document.getElementById("root"));
+const el = document.getElementById('root');
+
+render(<App manifest={el.getAttribute('data-param')}} />, el);
