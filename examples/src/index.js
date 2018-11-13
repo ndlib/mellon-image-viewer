@@ -9,4 +9,4 @@ const App = () => (
 
 const el = document.getElementById('root');
 
-render(<App manifest={el.getAttribute('data-param')}} />, el);
+render(<App manifest={el.getAttribute('data-param')} />, el);
