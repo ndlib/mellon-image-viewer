@@ -4,6 +4,7 @@ import config from './config';
 
 class ImageViewer extends Component{
   render(){
+    console.log("ImageViewer")
     console.log(this.props)
     return(
       <iframe width={this.props.width} height={this.props.height} src={config.universalViewerUrl + "#?manifest=" + this.props.manifest + "&c=" + this.props.c + "&m=" + this.props.m + "&s=" + this.props.s + "&cv=" + this.props.cv + "&xywh=" + this.props.xywh}></iframe>

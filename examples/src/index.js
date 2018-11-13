@@ -7,6 +7,6 @@ const App = () => (
   <ImageViewer manifest={this.props.manifest} />
 );
 
-const el = document.getElementById('root');
-console.log(el.getAttribute('data-param'))
-render(<App manifest={el.getAttribute('data-param')} />, el);
+const el = document.getElementById('root')
+console.error(el.getAttribute('data-param'))
+render(<App manifest={el.getAttribute('data-param')} />, el)
