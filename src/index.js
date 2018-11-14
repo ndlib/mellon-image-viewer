@@ -1,13 +1,21 @@
 import React, { Component} from "react";
 import PropTypes from 'prop-types';
 import config from './config';
+import queryString from 'query-string'
 
 class ImageViewer extends Component{
   render(){
-    console.log("ImageViewer")
     console.log(this.props)
+    const parsedQS = queryString.parse(this.props.location.search)
+
+    console.log(parsedQS)
+    let manifest = this.props.manifest
+    if (parsedQS.manifest) {
+      manifest = parsedQS.manifest
+    }
+
     return(
-      <iframe width={this.props.width} height={this.props.height} src={config.universalViewerUrl + "#?manifest=" + this.props.manifest + "&c=" + this.props.c + "&m=" + this.props.m + "&s=" + this.props.s + "&cv=" + this.props.cv + "&xywh=" + this.props.xywh}></iframe>
+      <iframe width={this.props.width} height={this.props.height} src={config.universalViewerUrl + "#?manifest=" + manifest + "&c=" + this.props.c + "&m=" + this.props.m + "&s=" + this.props.s + "&cv=" + this.props.cv + "&xywh=" + this.props.xywh}></iframe>
     );
   }
 }
