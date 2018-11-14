@@ -1,12 +1,13 @@
-
 import React from 'react';
 import { render} from 'react-dom';
 import ImageViewer from '../../src';
+import { BrowserRouter as Router, Route } from "react-router-dom"
+
 
 const App = (props) => (
-  <ImageViewer manifest={props.manifest} />
+  <Router>
+    <Route path="/" exact component={ImageViewer} />
+  </Router>
 );
 
-const el = document.getElementById('root')
-console.error(el.getAttribute('data-param'))
-render(<App manifest={el.getAttribute('data-param')} />, el)
+render(<App />, document.getElementById('root'))
