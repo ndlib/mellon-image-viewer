@@ -1,3 +1,3 @@
 module.exports = {
-  universalViewerUrl: '/universalviewer/index.html'
+  universalViewerUrl: '/universalviewer/src/uv.html'
 }

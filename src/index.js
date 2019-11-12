@@ -39,7 +39,7 @@ ImageViewer.propTypes = {
 ImageViewer.defaultProps = {
   width: "800",
   height: "600",
-  manifest: "https://s3.amazonaws.com/mellon-data-broker-publicbucket-wtci53auglzt/manifest_prod.json",
+  manifest: "",
   c: "",
   m: "",
   s: "",
