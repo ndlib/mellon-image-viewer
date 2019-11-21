@@ -64,5 +64,8 @@ typings/
 # the cloned source from the universalviewer build script
 /universalviewer
 
+# the cloned source from the mirador build script
+/mirador
+
 # This is Jeremy, I have in my ~/.gitignore a setting to ignore .DS_Store
 .DS_Store

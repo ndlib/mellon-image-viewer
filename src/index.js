@@ -19,7 +19,7 @@ class ImageViewer extends Component{
     let viewerURL = config[viewer]
 
     const updateManifestURL = () => {
-      let manifest = document.getElementById("ManifestUrl")
+      manifest = document.getElementById("ManifestUrl")
       updateIFrame()
     }
 
@@ -80,7 +80,7 @@ ImageViewer.propTypes = {
 ImageViewer.defaultProps = {
   width: "800",
   height: "600",
-  manifest: "https://s3.amazonaws.com/mellon-data-broker-publicbucket-wtci53auglzt/manifest_prod.json",
+  manifest: "https://presentation-iiif.library.nd.edu/CTAO-01-28/manifest",
   viewer: "mirador",
   c: "",
   m: "",
