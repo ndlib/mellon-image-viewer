@@ -1,6 +1,6 @@
-echo "---- BUILD Universalviewer ----"
+echo "---- BUILD Mirador ----"
 
-cd universalviewer
+cd mirador
 
 # build the dist
-grunt build --dist || { echo "UN Grunt Build failed" ;exit 1; }
+yarn build || { echo "Mirador Build failed" ;exit 1; }

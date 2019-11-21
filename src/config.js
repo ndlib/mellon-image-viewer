@@ -1,4 +1,4 @@
 module.exports = {
-  universalViewer: '/universalviewer/src/uv.html',
+  universalViewer: '/src/universalviewer/index.html',
   mirador: '/src/mirador/index.html'
 }

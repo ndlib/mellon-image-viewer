@@ -1,6 +1,14 @@
-echo "---- INSTALL React  ----"
+echo "---- INSTALL Mirador  ----"
 
-# build the react app
-npm install -g yarn || { echo "Npm install failed" ;exit 1; }
+miradorbranch=master
 
-yarn install || { echo "yarn install failed" ;exit 1; }
+# cleanup if it exists
+rm -rf mirador
+
+# get mirador
+git clone https://github.com/ProjectMirador/mirador.git || { echo "Mirador git clone failed" ;exit 1; }
+cd universalviewer
+git checkout $miradorbranch
+
+#install mirador mods
+npm install || { echo "Mirador Npm install failed" ;exit 1; }

@@ -31,9 +31,9 @@ class ImageViewer extends Component{
     const updateIFrame = () => {
       console.log("Click Registered: ", viewerURL)
       if (document.getElementById('viewerFrame')) {
-        var iframeParent = document.getElementById('iframeHolder')
-        var iframe = document.getElementById('viewerFrame')
-        var newIframe = document.createElement('iframe')
+        const iframeParent = document.getElementById('iframeHolder')
+        const iframe = document.getElementById('viewerFrame')
+        let newIframe = document.createElement('iframe')
         newIframe.id = 'viewerFrame'
         newIframe.src = viewerURL + "#?manifest=" + manifest + "&c=" + this.props.c + "&m=" + this.props.m + "&s=" + this.props.s + "&cv=" + this.props.cv + "&xywh=" + this.props.xywh
         newIframe.width=this.props.width
