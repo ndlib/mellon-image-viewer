@@ -1,6 +1,6 @@
-echo "---- BUILD Leaflet ----"
+echo "---- BUILD Diva ----"
 
-cd leaflet
+cd diva.js
 
 # build the dist
-yarn build || { echo "Leaflet Build failed" ;exit 1; }
+yarn build || { echo "Diva Build failed" ;exit 1; }

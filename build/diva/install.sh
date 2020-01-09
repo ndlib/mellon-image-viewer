@@ -1,14 +1,14 @@
 echo "---- INSTALL Leaflet  ----"
 
-leafletbranch=master
+divabranch=master
 
 # cleanup if it exists
-rm -rf leaflet
+rm -rf diva
 
 # get mirador
-git clone https://github.com/Leaflet/Leaflet.git || { echo "Leaflet git clone failed" ;exit 1; }
-cd leaflet
-git checkout $leafletbranch
+git clone git://github.com/DDMAL/diva.js.git || { echo "diva git clone failed" ;exit 1; }
+cd diva
+git checkout $divabranch
 
 #install mirador mods
-npm install || { echo "Leaflet Npm install failed" ;exit 1; }
+npm install || { echo "diva Npm install failed" ;exit 1; }
