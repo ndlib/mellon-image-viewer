@@ -1,14 +1,14 @@
-echo "---- INSTALL Leaflet  ----"
+echo "---- INSTALL Diva  ----"
 
 divabranch=master
 
 # cleanup if it exists
 rm -rf diva
 
-# get mirador
-git clone git://github.com/DDMAL/diva.js.git || { echo "diva git clone failed" ;exit 1; }
-cd diva
+# get diva
+git clone --branch v6.0.2 git://github.com/DDMAL/diva.js.git divajs || { echo "Diva git clone failed" ;exit 1; }
+cd divajs
 git checkout $divabranch
 
-#install mirador mods
-npm install || { echo "diva Npm install failed" ;exit 1; }
+#install diva mods
+npm install || { echo "Diva Npm install failed" ;exit 1; }
