@@ -1,6 +1,6 @@
 echo "---- BUILD Diva ----"
 
-cd diva.js
+cd divajs
 
 # build the dist
 yarn build || { echo "Diva Build failed" ;exit 1; }

@@ -1,7 +1,7 @@
 echo "---- INSTALL Diva  ----"
 
 # cleanup if it exists
-rm -rf diva
+rm -rf divajs
 
 # get diva
 git clone --branch v6.0.2 git://github.com/DDMAL/diva.js.git divajs || { echo "Diva git clone failed" ;exit 1; }
