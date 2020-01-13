@@ -7,7 +7,7 @@ rm -rf mirador
 
 # get mirador
 git clone https://github.com/ProjectMirador/mirador.git || { echo "Mirador git clone failed" ;exit 1; }
-cd universalviewer
+cd mirador
 git checkout $miradorbranch
 
 #install mirador mods

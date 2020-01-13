@@ -53,6 +53,7 @@ class ImageViewer extends Component{
         <button id="update" onClick={() => updateManifestURL()}>Update</button>
         <img width="32px" id="mirador" onClick={() => changeViewer('mirador')} src='/src/img/mirador.png' />
         <img width="32px" id="imageViewer" onClick={() => changeViewer('universalViewer')} src='/src/img/uv.png' />
+        <img width="32px" id="diva" onClick={() => changeViewer('diva')} src='/src/img/diva.png' />
       </div>
     )
   }
