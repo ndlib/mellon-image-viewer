@@ -54,6 +54,8 @@ class ImageViewer extends Component{
         <img width="32px" id="mirador" onClick={() => changeViewer('mirador')} src='/src/img/mirador.png' />
         <img width="32px" id="imageViewer" onClick={() => changeViewer('universalViewer')} src='/src/img/uv.png' />
         <img width="32px" id="diva" onClick={() => changeViewer('diva')} src='/src/img/diva.png' />
+        <img width="32px" id="leaflet" onClick={() => changeViewer('leaflet')} src='/src/img/leaflet.png' />
+                <img width="32px" id="tify" onClick={() => changeViewer('tify')} src='/src/img/tify.png' />
       </div>
     )
   }

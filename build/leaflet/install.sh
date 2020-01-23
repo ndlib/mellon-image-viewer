@@ -1,14 +1,17 @@
 echo "---- INSTALL Leaflet  ----"
 
-leafletbranch=master
-
 # cleanup if it exists
 rm -rf leaflet
 
-# get mirador
-git clone https://github.com/Leaflet/Leaflet.git || { echo "Leaflet git clone failed" ;exit 1; }
-cd leaflet
-git checkout $leafletbranch
+# get leaflet and leaflet-iiif
+git clone https://github.com/Leaflet/Leaflet.git leaflet || { echo "Leaflet git clone failed" ;exit 1; }
+git clone https://github.com/mejackreed/Leaflet-IIIF.git leaflet || { echo "Leaflet-IIIF git clone failed" ;exit 1; }
 
-#install mirador mods
+cd leaflet
+
+#install leaflet mods
 npm install || { echo "Leaflet Npm install failed" ;exit 1; }
+
+cd ../leaflet-iiif
+
+npm install iiif-leaflet leaflet-iiif

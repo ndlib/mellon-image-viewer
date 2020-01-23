@@ -4,4 +4,4 @@
 
 ./build/react/install.sh || { echo "React Install Failed"; exit 1; }
 
-./build/diva/install.sh || { echo "Diva Install Failed"; exit 1; }
+./build/leaflet/install.sh || { echo "Leaflet Install Failed"; exit 1; }
