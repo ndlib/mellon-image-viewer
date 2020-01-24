@@ -6,7 +6,7 @@ map = L.map('map', {
   zoom: 0
 });
 
-var url = window.location.search.replace('?url=', '')
+var url = window.location.search.replace('?url=', 'https://presentation-iiif.library.nd.edu/CTAO-01-28/manifest')
 
 // http://stackoverflow.com/a/18222306
 var urlregex = /^(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?$/;

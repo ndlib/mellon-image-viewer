@@ -67,5 +67,16 @@ typings/
 # the cloned source from the mirador build script
 /mirador
 
+# the cloned source from the leaflet build script
+/leaflet
+/leaflet-iiif
+
+
+# the cloned source from the diva build script
+/divajs
+
+# the cloned source from the tify build script
+/tify
+
 # This is Jeremy, I have in my ~/.gitignore a setting to ignore .DS_Store
 .DS_Store
