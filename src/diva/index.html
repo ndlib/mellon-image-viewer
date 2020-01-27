@@ -5,15 +5,22 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="../../divajs/source/js/diva.js"></script>
+    <link rel="stylesheet" href="../../divajs/build/diva.css" />
     <title>Document</title>
 </head>
 <body>
-  <div id="diva-wrapper"></div>
-  <script type="text/javascript">
-  let diva = new Diva('diva-wrapper', {
-      objectData: "https://presentation-iiif.library.nd.edu/CTAO-01-28/manifest"
-  });
-  </script>
+    <div id="diva-wrapper"></div>
+    <script src="../../divajs/build/diva.js"></script>
+    <script src="../../divajs/build/plugins/download.js"></script>
+    <script src="../../divajs/build/plugins/manipulation.js"></script>
+    <script src="../../divajs/build/plugins/metadata.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function ()
+        {
+            diva = new Diva('diva-wrapper', {
+              objectData: "https://presentation-iiif.library.nd.edu/CTAO-01-28/manifest"
+          });
+        }, false)
+    </script>
 </body>
 </html>
