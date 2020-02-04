@@ -14,11 +14,13 @@
     <script src="../../divajs/build/plugins/download.js"></script>
     <script src="../../divajs/build/plugins/manipulation.js"></script>
     <script src="../../divajs/build/plugins/metadata.js"></script>
+    <script src="../getvars.js"></script>
     <script>
+        var manifest = getUrlVars()["manifest"]
         document.addEventListener('DOMContentLoaded', function ()
         {
             diva = new Diva('diva-wrapper', {
-              objectData: "https://presentation-iiif.library.nd.edu/CTAO-01-28/manifest"
+              objectData: manifest
           });
         }, false)
     </script>
