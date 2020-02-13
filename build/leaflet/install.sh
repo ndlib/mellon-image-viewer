@@ -15,4 +15,4 @@ npm install || { echo "Leaflet Npm install failed" ;exit 1; }
 
 cd ../leaflet-iiif
 
-npm install iiif-leaflet leaflet-iiif
+npm install | { echo "Leaflet-IIIF Npm install failed" ;exit 1; }
