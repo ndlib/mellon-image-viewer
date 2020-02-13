@@ -2,10 +2,11 @@ echo "---- INSTALL Leaflet  ----"
 
 # cleanup if it exists
 rm -rf leaflet
+rm -rf leaflet-iiif
 
 # get leaflet and leaflet-iiif
 git clone https://github.com/Leaflet/Leaflet.git leaflet || { echo "Leaflet git clone failed" ;exit 1; }
-git clone https://github.com/mejackreed/Leaflet-IIIF.git leaflet || { echo "Leaflet-IIIF git clone failed" ;exit 1; }
+git clone https://github.com/mejackreed/Leaflet-IIIF.git leaflet-iiif || { echo "Leaflet-IIIF git clone failed" ;exit 1; }
 
 cd leaflet
 
