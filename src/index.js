@@ -4,6 +4,10 @@ import config from './config';
 import queryString from 'query-string'
 
 class ImageViewer extends Component{
+  constructor(props) {
+      super(props)
+      this.textInput = React.createRef()
+  }
 
   render(){
     const parsedQS = queryString.parse(this.props.location.search)
@@ -19,7 +23,7 @@ class ImageViewer extends Component{
     let viewerURL = config[viewer]
 
     const updateManifestURL = () => {
-      manifest = document.getElementById("ManifestUrl")
+      manifest = this.textInput.current.value
       updateIFrame()
     }
 
@@ -49,7 +53,7 @@ class ImageViewer extends Component{
         <div id="iframeHolder">
           <iframe id = "viewerFrame" width={this.props.width} height={this.props.height} src={viewerURL + "#?manifest=" + manifest + "&c=" + this.props.c + "&m=" + this.props.m + "&s=" + this.props.s + "&cv=" + this.props.cv + "&xywh=" + this.props.xywh}></iframe>
         </div>
-        <input type="text" name='ManifestUrl'  size={this.props.width/8} />
+        <input type="text" name='ManifestUrl' ref={this.textInput} size={this.props.width/8} />
         <button id="update" onClick={() => updateManifestURL()}>Update</button>
         <img width="32px" id="mirador" onClick={() => changeViewer('mirador')} src='/src/img/mirador.png' />
         <img width="32px" id="imageViewer" onClick={() => changeViewer('universalViewer')} src='/src/img/uv.png' />
@@ -83,7 +87,7 @@ ImageViewer.propTypes = {
 ImageViewer.defaultProps = {
   width: "800",
   height: "600",
-  manifest: "https://presentation-iiif.library.nd.edu/CTAO-01-28/manifest",
+  manifest: "https://presentation-iiif.library.nd.edu/002209668/manifest",
   viewer: "mirador",
   c: "",
   m: "",

@@ -14,15 +14,12 @@
     <script type="text/javascript">
      var manifest = getUrlVars()["manifest"]
      var parameters = new URLSearchParams(window.location.search)
-     var manifestUrl = "https://presentation-iiif.library.nd.edu/CTAO-01-28/manifest"
-     if (parameters.get('manifest')) {
-       manifestUrl = parameters.get('manifest')
-     }
+     //var manifestUrl = "https://presentation-iiif.library.nd.edu/CTAO-01-28/manifest"
 
      var miradorInstance = Mirador.viewer({
        id: 'mirador',
        windows: [{
-         manifestId: manifestUrl,
+         manifestId: manifest,
        }],
        manifests: {
          manifestUrl: {},
