@@ -31,4 +31,7 @@ rm -rf dist/*
 
 echo "FINISHED BUILD"
 
+echo $S3_DEST_BUCKET
+
 # deploy
+aws s3 sync ./dist/* $S3_DEST_BUCKET
