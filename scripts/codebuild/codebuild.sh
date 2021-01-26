@@ -32,4 +32,5 @@ rm -rf dist/*
 echo "FINISHED BUILD"
 
 # deploy
-aws s3 sync ./dist/ $S3_DEST_BUCKET
+echo `aws s3 sync dist/ "s3://$S3_DEST_BUCKET"`
+aws s3 sync dist/ "s3://$S3_DEST_BUCKET"
