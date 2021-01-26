@@ -34,3 +34,4 @@ echo "FINISHED BUILD"
 # deploy
 echo `aws s3 sync dist/ "s3://$S3_DEST_BUCKET"`
 aws s3 sync dist/ "s3://$S3_DEST_BUCKET"
+aws s3 sync ./src "s3://$S3_DEST_BUCKET/src"
