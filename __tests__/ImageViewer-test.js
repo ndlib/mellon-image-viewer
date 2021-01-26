@@ -13,7 +13,7 @@ test('ImageViewer allows for manifests to be set in the query string', () => {
 
 test('ImageViewer Renders a default Iframe with default data', () => {
   const iframe = shallow(<ImageViewer location={ location } /> );
-  expect(iframe.find('iframe').html()).toEqual('<iframe id="viewerFrame" width="800" height="600" src="/src/mirador/index.html#?manifest=https://presentation-iiif.library.nd.edu/CTAO-01-28/manifest&amp;c=&amp;m=&amp;s=&amp;cv=&amp;xywh="></iframe>');
+  expect(iframe.find('iframe').html()).toEqual('<iframe id="viewerFrame" width="800" height="600" src="/src/mirador/index.html#?manifest=https://presentation-iiif.library.nd.edu/002209668/manifest&amp;c=&amp;m=&amp;s=&amp;cv=&amp;xywh="></iframe>');
 });
 
 test('ImageViewer allows the height to be set', () => {
