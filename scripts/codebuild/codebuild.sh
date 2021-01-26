@@ -1,5 +1,5 @@
 # install
-./scripts/codebuild/universalviewer/install.sh || { echo "Universal Viewer Install Failed"; exit 1; }
+# ./scripts/codebuild/universalviewer/install.sh || { echo "Universal Viewer Install Failed"; exit 1; }
 
 ./scripts/codebuild/mirador/install.sh || { echo "Mirador Install Failed"; exit 1; }
 
@@ -14,7 +14,7 @@ rm -rf dist/*
 
 # build
 
-./scripts/codebuild/universalviewer/build.sh || { echo "Universal Viewer Build Failed"; exit 1; }
+# ./scripts/codebuild/universalviewer/build.sh || { echo "Universal Viewer Build Failed"; exit 1; }
 
 ./scripts/codebuild/mirador/build.sh || { echo "Mirador Build Failed"; exit 1; }
 
@@ -26,7 +26,7 @@ rm -rf dist/*
 
 # post build
 
-./scripts/codebuild/universalviewer/post_build.sh || { echo "Universal Viewer Post Build Failed"; exit 1; }
+# ./scripts/codebuild/universalviewer/post_build.sh || { echo "Universal Viewer Post Build Failed"; exit 1; }
 ./scripts/codebuild/mirador/post_build.sh || { echo "Mirador Post Build Failed"; exit 1; }
 
 echo "FINISHED BUILD"

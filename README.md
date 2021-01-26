@@ -16,7 +16,8 @@ Tify: https://github.com/tify-iiif-viewer/tify
 
 
 # Install
-./local-build.sh
+./scripts/codebuild/codebuild.sh
+
 
 # run
 yarn start
