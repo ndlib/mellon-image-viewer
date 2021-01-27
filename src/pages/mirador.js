@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import typy from 'typy'
 import queryString from 'query-string'
 import Layout from '../components/layout'
-import MiradorWrapper from '../components/Miradorwrapper'
+import MiradorWrapper from '../components/miradorwrapper'
 import Seo from '../components/seo'
 
 // eslint-disable-next-line complexity
