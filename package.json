@@ -1,43 +1,54 @@
 {
-  "name": "@hesburgh-wse/react-iv-component",
-  "version": "0.1.1",
-  "description": "A IIIF React component",
-  "main": "dist/index.js",
-  "license": "MIT",
-  "scripts": {
-    "test": "jest",
-    "watch": "jest --watch",
-    "start": "webpack-dev-server --mode development",
-    "transpile": "babel src -d dist --copy-files",
-    "prepublishOnly": "npm run transpile",
-    "build": "webpack --mode production"
-  },
-  "peerDependencies": {
-    "query-string": "^6.2.0",
-    "react": "^16.3.0",
-    "react-dom": "^16.3.0",
-    "react-router-dom": "^4.3.1"
+  "name": "gatsby-starter-default",
+  "private": true,
+  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "version": "0.1.0",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "dependencies": {
+    "gatsby": "^2.26.1",
+    "gatsby-image": "^2.5.0",
+    "gatsby-plugin-manifest": "^2.6.1",
+    "gatsby-plugin-offline": "^3.4.0",
+    "gatsby-plugin-react-helmet": "^3.4.0",
+    "gatsby-plugin-sharp": "^2.8.0",
+    "gatsby-plugin-s3": "^0.3.8",
+    "gatsby-source-filesystem": "^2.5.0",
+    "gatsby-transformer-sharp": "^2.6.0",
+    "prop-types": "^15.7.2",
+    "mirador": "^3.0.0",
+    "mirador-image-tools": "^0.10.0",
+    "typy": "^3.1.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0"
   },
   "devDependencies": {
+    "prettier": "2.2.1",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "7.1.4",
     "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "css-loader": "^1.0.0",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.5.0",
-    "html-webpack-plugin": "^3.2.0",
-    "jest": "^23.6.0",
-    "query-string": "^6.2.0",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "react-router-dom": "^4.3.1",
-    "react-test-renderer": "^16.5.2",
-    "style-loader": "^0.23.0",
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.11"
+    "babel-preset-react": "^6.24.1"
   },
-  "dependencies": {}
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "0BSD",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "deploy": "gatsby-plugin-s3 deploy --yes"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
 }

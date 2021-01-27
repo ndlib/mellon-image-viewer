@@ -80,3 +80,7 @@ typings/
 
 # This is Jeremy, I have in my ~/.gitignore a setting to ignore .DS_Store
 .DS_Store
+
+.cache
+
+/public
