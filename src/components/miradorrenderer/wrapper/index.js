@@ -5,9 +5,7 @@ import mirador from 'mirador'
 class MiradorWrapper extends React.Component {
   componentDidMount () {
     const { config, plugins } = this.props
-    if (mirador) {
-      mirador.viewer(config, plugins)
-    }
+    mirador.viewer(config, plugins)
   }
 
   render () {
