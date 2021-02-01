@@ -4,7 +4,7 @@ import Usage from './usage'
 import { buildConfig } from './config'
 import Wrapper from './wrapper'
 
-const MiradorViewer = ({ id, location, plugins, themeColor }) => {
+const MiradorRenderer = ({ id, location, plugins, themeColor }) => {
   const config = buildConfig(id, location, themeColor)
 
   let body = null
@@ -31,15 +31,15 @@ const MiradorViewer = ({ id, location, plugins, themeColor }) => {
   )
 }
 
-MiradorViewer.defaultProps = {
+MiradorRenderer.defaultProps = {
   plugins: [],
 }
 
-MiradorViewer.propTypes = {
+MiradorRenderer.propTypes = {
   id: PropTypes.string.isRequired,
   location: PropTypes.object.isRequired,
   plugins: PropTypes.array.isRequired,
   themeColor: PropTypes.string.isRequired,
 }
 
-export default MiradorViewer
+export default MiradorRenderer

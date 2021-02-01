@@ -1,4 +1,3 @@
-import typy from 'typy'
 import queryString from 'query-string'
 
 export const buildConfig = (id, location, themeColor = '#blue') => {
