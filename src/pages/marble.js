@@ -1,5 +1,5 @@
 import React from "react"
-//import { miradorImageToolsPlugin } from 'mirador-image-tools/es/'
+import { miradorImageToolsPlugin } from 'mirador-image-tools/es/'
 import PropTypes from 'prop-types'
 import Layout from '../components/layout'
 import MiradorViewer from '../components/miradorviewer'
@@ -16,7 +16,7 @@ const MiradorViewerPage = ({ location }) => {
         description={`Default Viewer for Mirador.`}
         noIndex
       />
-      <MiradorViewer id="default-mirador-viewer" location={location} plugins={[]} themeColor="#blue" />
+      <MiradorViewer  id="marble-viewer" location={location} plugins={[...miradorImageToolsPlugin]} themeColor="#blue" />
     </Layout>
   )
 }
