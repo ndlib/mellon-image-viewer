@@ -1,10 +1,22 @@
-const s3BucketName = process.env.S3_DEST_BUCKET || ''
+const path = require('path')
+const activeEnv =
+  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || 'development'
+console.log(`Using environment config: '${activeEnv}'`)
+require('dotenv').config({
+  path: `.env.${activeEnv}`,
+})
+
+const s3DestBucket = process.env.S3_DEST_BUCKET || ''
+
+console.table([
+  { variable: 'S3_DEST_BUCKET:', value: s3DestBucket },
+])
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Hesburgh Libray IIIF Viewer`,
+    description: ``,
+    author: `Hesburgh Library`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -12,7 +24,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/assets/images`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -20,19 +32,19 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
+        name: `marble-iiif-viewers`,
         short_name: `starter`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/images/manifestLogo.png`, // This path is relative to the root of the site.
       },
     },
     {
       resolve: `gatsby-plugin-s3`,
       options: {
-        bucketName: s3BucketName,
+        bucketName: s3DestBucket,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
