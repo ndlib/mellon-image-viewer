@@ -11,7 +11,6 @@ import Wrapper from '../components/miradorrenderer/wrapper'
 // eslint-disable-next-line complexity
 const MarbleViewerPage = ({ location }) => {
   const config = buildConfig("marble-viewer", location, '#blue')
-  console.log('config', config)
   const plugins = [...miradorImageToolsPlugin]
   let body = null
   try {
