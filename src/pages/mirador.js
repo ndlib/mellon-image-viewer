@@ -2,11 +2,11 @@ import React from "react"
 //import { miradorImageToolsPlugin } from 'mirador-image-tools/es/'
 import PropTypes from 'prop-types'
 import Layout from '../components/layout'
-import MiradorViewer from '../components/miradorviewer'
+import MiradorRenderer from '../components/miradorrenderer'
 import Seo from '../components/seo'
 
 // eslint-disable-next-line complexity
-const MiradorViewerPage = ({ location }) => {
+const DefaultMiradorPage = ({ location }) => {
 
   return (
     <Layout location={location}>
@@ -16,11 +16,11 @@ const MiradorViewerPage = ({ location }) => {
         description={`Default Viewer for Mirador.`}
         noIndex
       />
-      <MiradorViewer id="default-mirador-viewer" location={location} plugins={[]} themeColor="#blue" />
+      <MiradorRenderer id="default-mirador-viewer" location={location} plugins={[]} themeColor="#blue" />
     </Layout>
   )
 }
-MiradorViewerPage.propTypes = {
+DefaultMiradorPage.propTypes = {
   location: PropTypes.object.isRequired,
 }
-export default MiradorViewerPage
+export default DefaultMiradorPage

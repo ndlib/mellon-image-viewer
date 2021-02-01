@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MiradorViewer renders a manifest when there is a manifest. 1`] = `
+exports[`MiradorRenderer renders a manifest when there is a manifest. 1`] = `
 <div
   className="sizeWrapper"
   style={Object {}}
@@ -11,7 +11,7 @@ exports[`MiradorViewer renders a manifest when there is a manifest. 1`] = `
 </div>
 `;
 
-exports[`MiradorViewer renders usage when there is no manifest. 1`] = `
+exports[`MiradorRenderer renders usage when there is no manifest. 1`] = `
 <div
   className="sizeWrapper"
   style={Object {}}
