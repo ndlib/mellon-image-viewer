@@ -47,6 +47,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "jest",
+    "reset-snapshots": "jest -u",
     "deploy": "gatsby-plugin-s3 deploy --yes"
   },
   "repository": {
