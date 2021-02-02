@@ -9,7 +9,7 @@ const MiradorRenderer = ({ id, location, plugins, themeColor }) => {
 
   let body = null
   try {
-    if (config.windows[0].manifestId) {
+    if (window && config.windows[0].manifestId) {
       body = (
         <Wrapper
           config={config}
