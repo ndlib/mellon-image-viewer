@@ -33,7 +33,7 @@ function SEO({ description, lang, meta, title }) {
       htmlAttributes={{
         lang,
       }}
-      title={defaultTitle}
+      title={title}
       titleTemplate={null}
       meta={[
         {
